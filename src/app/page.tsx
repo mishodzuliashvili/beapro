@@ -1,23 +1,20 @@
 import Hero from "@/_components/marketing/hero";
 import { TracingBeam } from "@/_components/ui/tracing-beam";
 import getCurrentUser from "@/actions/user/current/get";
-import db from "@/lib/db";
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { redirect } from "next/navigation";
 import { BsBarChartSteps } from "react-icons/bs";
 import { FaTasks } from "react-icons/fa";
-import { GoReport } from "react-icons/go";
-import { IoGameControllerOutline } from "react-icons/io5";
 import { MdCenterFocusWeak, MdOutlineGamepad } from "react-icons/md";
-import { PiShootingStarThin } from "react-icons/pi";
 import { TbReportAnalytics } from "react-icons/tb";
 import { TfiTarget } from "react-icons/tfi";
-import { WiStars } from "react-icons/wi";
 
 type HomePageProps = {
   params: {};
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export const dynamic = "force-dynamic";
 
 export default async function HomePage({
   params,
@@ -25,7 +22,7 @@ export default async function HomePage({
 }: HomePageProps) {
   const user = await getCurrentUser();
   if (user) {
-    redirect("/dashboard");
+    return redirect("/dashboard");
   }
   return (
     <>
@@ -55,13 +52,9 @@ export default async function HomePage({
                 ></path>
               </svg>
             </div>
-            <img
+            <Image
               src="https://cdn.dribbble.com/users/1615584/screenshots/15016610/media/9550ad96f999b83dc6ca7aa75ce23f02.jpg"
               // src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/333285651/original/56024d63ace9244123b471379f9fb58f0d953e63/make-website-for-you.png"
-              // src="https://cdn.dribbble.com/userupload/4260168/file/original-129e8cf04b9070d7859613ce26b5b413.jpg?resize=400x0"
-              // src="https://www.southernliving.com/thmb/XOCPpFwcsQBZ7eYnSAD5h3NuALI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gettyimages-735896407-2000-50ed94160ae543f3af9b378b6ef0656c.jpg"
-              // src="https://media.discordapp.net/attachments/1034362489896452147/1240659322837667900/PXL_20240516_130956264.PORTRAIT.jpg?ex=6648af08&is=66475d88&hm=d078cb48ee53ad67cf068f24fbeccf7d0dec5fa64ead6726d9f609e41de3ebf6&=&format=webp&width=468&height=622"
-              // src="https://tbiliselebi.ge/files/2024/03/27/10205/zura-gorgadze_w_h.jpeg"
               alt=""
               className="w-full rounded-lg object-cover h-[700px]"
             />
@@ -225,10 +218,9 @@ export default async function HomePage({
                         role="tabpanel"
                         aria-labelledby="tabs-with-card-item-1"
                       >
-                        <img
+                        <Image
                           className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
                           src="https://media.istockphoto.com/id/1291215867/vector/megaphone-with-speech-bubble-vector-illustration-template-for-business-promotion-advertising.jpg?s=612x612&w=0&k=20&c=ZrvOn_W_c4odDpwQ1Qt7ksRy8SIK65wKLsnoBVsKgGk="
-                          // src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
                           alt="Image Description"
                         />
                       </div>
@@ -239,7 +231,7 @@ export default async function HomePage({
                         role="tabpanel"
                         aria-labelledby="tabs-with-card-item-2"
                       >
-                        <img
+                        <Image
                           className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
                           src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
                           alt="Image Description"
@@ -252,7 +244,7 @@ export default async function HomePage({
                         role="tabpanel"
                         aria-labelledby="tabs-with-card-item-3"
                       >
-                        <img
+                        <Image
                           className="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/20"
                           src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
                           alt="Image Description"
