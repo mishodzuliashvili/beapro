@@ -1,0 +1,15 @@
+/* @import url("//cdn.web-fonts.ge/fonts/bpg-banner/css/bpg-banner.min.css"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* * {
+  font-family: "BPG Banner", sans-serif;
+} */
