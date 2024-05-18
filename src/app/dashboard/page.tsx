@@ -1,4 +1,6 @@
+import Select from "@/_components/select";
 import db from "@/lib/db";
+import PageForm from "./page-form";
 
 type DashboardPageProps = {
   params: {};
@@ -16,6 +18,7 @@ export default async function DashboardPage({
         {users.map((user) => (
           <div key={user.id}>{user.name}</div>
         ))}
+        <PageForm />
       </div>
     </>
   );
