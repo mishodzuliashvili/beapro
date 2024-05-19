@@ -30,7 +30,7 @@ export default function ThemeModal({}: ThemeModalProps) {
           {(onClose) => (
             <>
               <ModalHeader className="flex text-center flex-col gap-1 pt-10">
-                მოარგე თემა შენს სტილს
+                Choose your style
               </ModalHeader>
               <ModalBody className="text-center flex items-center flex-col pb-10">
                 <ThemeSwitcher />

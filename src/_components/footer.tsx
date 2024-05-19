@@ -1,6 +1,7 @@
 import { RiTwitterXLine } from "react-icons/ri";
 import TLink from "./t-link";
 import { FaGithub } from "react-icons/fa";
+import { GITHUB_LINK, TWITTER_LINK } from "@/lib/constants";
 type FooterProps = {};
 
 export default function Footer({}: FooterProps) {
@@ -48,14 +49,14 @@ export default function Footer({}: FooterProps) {
           <div className="md:text-end space-x-2">
             <a
               className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-              href="https://github.com/mishodzuliashvili/beapro"
+              href={TWITTER_LINK}
               target="_blank"
             >
               <RiTwitterXLine size={16} />
             </a>
             <a
               className="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-              href="https://github.com/mishodzuliashvili/beapro"
+              href={GITHUB_LINK}
               target="_blank"
             >
               <FaGithub size={16} />

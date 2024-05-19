@@ -17,11 +17,19 @@ export default function ThemeSwitcher() {
 
   return (
     <div className="flex gap-4">
-      <Button variant="flat" onClick={() => setTheme("light")}>
-        ნათელი
+      <Button
+        variant="flat"
+        className="bg-[#6b41ed] text-white"
+        onClick={() => setTheme("purple")}
+      >
+        Purple
       </Button>
-      <Button variant="flat" onClick={() => setTheme("dark")}>
-        მუქი
+      <Button
+        className="bg-[#FF6500] text-white"
+        variant="flat"
+        onClick={() => setTheme("orange")}
+      >
+        Orange
       </Button>
     </div>
   );

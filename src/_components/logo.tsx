@@ -5,10 +5,10 @@ export const Logo = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="480"
-      height="480"
+      width="70"
+      height="70"
       version="1"
-      viewBox="0 0 360 360"
+      viewBox="70 0 360 360"
       className="w-[70px] fill-primary"
     >
       <path

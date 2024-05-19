@@ -92,15 +92,30 @@ const config = {
           },
           layout: {},
         },
-        dark: {
+        orange: {
           colors: {
-            background: "#151719",
-            foreground: "#fff",
             primary: {
-              DEFAULT: "#de7033",
+              DEFAULT: "#FF6500",
+              foreground: "white",
+            },
+            secondary: {
+              DEFAULT: "#FF8A08",
               foreground: "white",
             },
           },
+          layout: {},
+        },
+        purple: {
+          colors: {
+            primary: {
+              DEFAULT: "#6b41ed",
+              foreground: "white",
+            },
+          },
+          layout: {},
+        },
+        dark: {
+          colors: {},
           layout: {},
         },
       },

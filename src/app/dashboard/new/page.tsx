@@ -51,7 +51,7 @@ export default async function AIPage({ params, searchParams }: AIPageProps) {
       </div>
       <div className="container mt-20">
         <div className="max-w-screen-sm mx-auto text-center">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-black via-violet-500 from-15% to-blue-500 inline-block text-transparent bg-clip-text">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-black via-primary from-15% to-secondary inline-block text-transparent bg-clip-text">
             Hello, {user?.name.split(" ")[0]} welcome to your chat
           </h1>
           <p className="mt-4 text-gray-600 text-xl">

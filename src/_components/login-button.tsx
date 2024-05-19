@@ -10,6 +10,7 @@ export default function LoginButton(props: LoginButtonProps) {
       authUrlParams={{
         connection_id: process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
       }}
+      className="w-full"
     >
       <Button {...props}>Log in</Button>
     </RegisterLink>

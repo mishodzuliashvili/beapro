@@ -13,9 +13,9 @@ export default function Providers({ children }: ProvidersProps) {
   return (
     <NextUIProvider>
       <ThemeProvider
-        defaultTheme="light"
+        defaultTheme="purple"
         attribute="class"
-        themes={["light", "dark", "modern"]}
+        themes={["orange", "purple"]}
       >
         <NavigationProvider>{children}</NavigationProvider>
       </ThemeProvider>

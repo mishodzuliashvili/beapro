@@ -6,7 +6,9 @@ import Hero from "@/_components/marketing/hero";
 import { BackgroundBeams } from "@/_components/ui/background-beams";
 import { TracingBeam } from "@/_components/ui/tracing-beam";
 import getCurrentUser from "@/actions/user/current/get";
+import { DEMO_VIDEO_URL } from "@/lib/constants";
 import { Button, Image } from "@nextui-org/react";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { BsBarChartSteps } from "react-icons/bs";
 import { FaTasks } from "react-icons/fa";
@@ -294,51 +296,39 @@ export default async function HomePage({
           </div>
         </div>
 
-        <div className="container mt-20">
-          <div className="rounded-xl bg-gradient-to-r from-primary to-secondary">
-            <div className="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
-              <div className="flex flex-col sm:grid justify-center items-center sm:grid-cols-2 sm:justify-between sm:items-center gap-2">
-                <div className="text-center flex-col flex items-center sm:flex-row sm:text-start sm:order-2 sm:flex sm:justify-end sm:items-center">
-                  <p className="mb-2 sm:mb-0 sm:me-5 inline-block text-sm font-semibold text-white">
-                    Ready to get started?
-                  </p>
-                  <LoginButton
-                    className="text-white font-semibold"
-                    variant="bordered"
-                  />
-                </div>
-
-                <div className="flex items-center w-fit">
-                  <Button
-                    className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
-                    // href="#"
-                    variant="light"
-                  >
-                    <svg
-                      className="flex-shrink-0 size-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
-                    Watch demo
-                  </Button>
-                  {/* <span className="inline-block border-e border-white/30 w-px h-5 mx-2"></span>
-                  <a
-                    className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
-                    href="#"
-                  >
-                    {` Explore what's new`}
-                  </a> */}
-                </div>
-              </div>
+        <div className="container">
+          <div className="px-4 gap-2 py-3 flex sm:flex-row flex-col items-center justify-between mt-20 rounded-xl bg-primary">
+            <Button
+              as={Link}
+              target="_blank"
+              href={DEMO_VIDEO_URL}
+              className="py-2 w-full sm:w-auto px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
+              variant="light"
+            >
+              <svg
+                className="flex-shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+              Watch demo
+            </Button>
+            <div className="flex sm:flex-row items-center flex-col gap-4 w-full sm:w-auto">
+              <p className="inline-block min-w-fit text-sm font-semibold text-white">
+                Ready to get started?
+              </p>
+              <LoginButton
+                className="text-white font-semibold w-full sm:w-auto"
+                variant="bordered"
+              />
             </div>
           </div>
         </div>
