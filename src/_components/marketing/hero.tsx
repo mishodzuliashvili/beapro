@@ -1,3 +1,4 @@
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { Button } from "@nextui-org/react";
 import { WiStars } from "react-icons/wi";
 
@@ -31,10 +32,17 @@ export default function Hero({}: HeroProps) {
         </div>
 
         <div className="mt-8 gap-3 flex justify-center">
-          <Button color="primary" size="lg">
-            <WiStars size={30} />
-            Get Started Now
-          </Button>
+          <RegisterLink
+            authUrlParams={{
+              connection_id:
+                process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
+            }}
+          >
+            <Button color="primary" size="lg">
+              <WiStars size={30} />
+              Get Started Now
+            </Button>
+          </RegisterLink>
         </div>
       </div>
     </div>

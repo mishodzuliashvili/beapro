@@ -8,6 +8,9 @@ import { IoMdDoneAll } from "react-icons/io";
 import { DateRangePicker } from "@nextui-org/react";
 import { Textarea } from "@nextui-org/react";
 import { RiSendPlane2Line } from "react-icons/ri";
+import Link from "next/link";
+import { BsArrowLeft } from "react-icons/bs";
+import TLink from "@/_components/t-link";
 type AIPageProps = {
   params: {};
   searchParams: { [key: string]: string | string[] | undefined };
@@ -24,7 +27,7 @@ async function run(formData: FormData) {
   const result = await model.generateContent(prompt);
   const response = result.response;
   const text = response.text();
-  console.log(text);
+  // console.log(text);
   return text;
 }
 
@@ -34,6 +37,18 @@ export default async function AIPage({ params, searchParams }: AIPageProps) {
 
   return (
     <>
+      <div className="container flex">
+        <TLink
+          href="/dashboard"
+          className="text-gray-600 group flex items-center gap-2 relative text-lg hover:text-primary"
+        >
+          <BsArrowLeft
+            className="group-hover:translate-x-[-5px] relative duration-200"
+            size={22}
+          />{" "}
+          <span>Back to dashboard</span>
+        </TLink>
+      </div>
       <div className="container mt-20">
         <div className="max-w-screen-sm mx-auto text-center">
           <h1 className="text-6xl font-bold bg-gradient-to-r from-black via-violet-500 from-15% to-blue-500 inline-block text-transparent bg-clip-text">
@@ -47,8 +62,8 @@ export default async function AIPage({ params, searchParams }: AIPageProps) {
       </div>
       <div className="container mt-10">
         <ol className="flex items-center max-w-sm w-full mx-auto">
-          <li className="flex w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800">
-            <span className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
+          <li className="flex w-full items-center text-primary dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-primary/10 after:border-4 after:inline-block dark:after:border-blue-800">
+            <span className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
               <IoChatbubbleEllipsesOutline size={22} />
             </span>
           </li>

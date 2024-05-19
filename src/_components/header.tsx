@@ -36,7 +36,11 @@ export default function Header({ user }: HeaderProps) {
   ];
 
   return (
-    <Navbar className="p-1" maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      className="p-1"
+      maxWidth="full"
+      // onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -45,7 +49,9 @@ export default function Header({ user }: HeaderProps) {
         <TLink href="/" color="foreground">
           <NavbarBrand>
             <Logo />
-            <p className="font-bold text-inherit text-xl ml-1">Beapro</p>
+            {/* <p className="font-bold text-inherit text-xl underline text-primary">
+              AI
+            </p> */}
           </NavbarBrand>
         </TLink>
       </NavbarContent>

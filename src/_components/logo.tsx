@@ -2,5 +2,5 @@ import { Image } from "@nextui-org/react";
 import React from "react";
 
 export const Logo = () => {
-  return <></>;
+  return <Image src="bp.jpg" width={60} alt="Logo Image" />;
 };

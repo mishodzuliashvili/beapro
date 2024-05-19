@@ -18,7 +18,7 @@ export default function AuthLink({ user }: AuthLinkProps) {
               process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
           }}
         >
-          <Button color="primary" variant="flat">
+          <Button variant="light" className="text-md">
             Log in
           </Button>
         </RegisterLink>

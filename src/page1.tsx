@@ -72,70 +72,70 @@
 //         />
 //       </div>
 
-//       <section className="relative py-10 sm:py-16 lg:py-24 container">
-//         <div className="">
-//           <div className="max-w-2xl mx-auto text-center">
-//             <h2 className="text-4xl text-foreground font-extrabold mx-auto md:text-6xl lg:text-5xl">
-//               როგორ მუშაობს?
-//             </h2>
-//             <p className="max-w-2xl mx-auto mt-4 text-base opacity-60 leading-relaxed md:text-2xl">
-//               გაიცაინი როგორ მუშაობს წებსაიტი
-//             </p>
-//           </div>
+// <section className="relative py-10 sm:py-16 lg:py-24 container">
+//   <div className="">
+//     <div className="max-w-2xl mx-auto text-center">
+//       <h2 className="text-4xl text-foreground font-extrabold mx-auto md:text-6xl lg:text-5xl">
+//         როგორ მუშაობს?
+//       </h2>
+//       <p className="max-w-2xl mx-auto mt-4 text-base opacity-60 leading-relaxed md:text-2xl">
+//         გაიცაინი როგორ მუშაობს წებსაიტი
+//       </p>
+//     </div>
 
-//           <div className="relative mt-12 lg:mt-20">
-//             <div className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
-//               <img
-//                 alt=""
-//                 loading="lazy"
-//                 width="1000"
-//                 height="500"
-//                 decoding="async"
-//                 data-nimg="1"
-//                 className="w-full"
-//                 // style="color:transparent"
-//                 src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
-//               />
-//             </div>
-//             <div className="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
-//               <div>
-//                 <div className="flex items-center justify-center w-16 h-16 mx-auto bg-primary text-white rounded-full">
-//                   <span className="text-xl font-semibold">1</span>
-//                 </div>
-//                 <h3 className="mt-6 text-xl font-semibold leading-tight md:mt-10">
-//                   შექმენი აქაუნთი
-//                 </h3>
-//                 <p className="mt-4 text-base opacity-60 md:text-lg">
-//                   შექმენი პროფილი და დაამატე ინფორმაცია შენს შესახებ.
-//                 </p>
-//               </div>
-//               <div>
-//                 <div className="flex items-center justify-center w-16 h-16 mx-auto text-white bg-primary rounded-full">
-//                   <span className="text-xl font-semibold">2</span>
-//                 </div>
-//                 <h3 className="mt-6 text-xl text font-semibold leading-tight md:mt-10">
-//                   გააკეთე ქვიზი
-//                 </h3>
-//                 <p className="mt-4 text-base opacity-60 md:text-lg">
-//                   შეავსე ფორმა რომელიც მოგვაწვდის შესაბამის მაგალითს.
-//                 </p>
-//               </div>
-//               <div>
-//                 <div className="flex items-center justify-center w-16 h-16 mx-auto text-white bg-primary rounded-full">
-//                   <span className="text-xl font-semibold">3</span>
-//                 </div>
-//                 <h3 className="mt-6 text-xl font-semibold leading-tight md:mt-10">
-//                   დაიწყე კონტაქტი
-//                 </h3>
-//                 <p className="mt-4 text-base opacity-60 md:text-lg">
-//                   შენ შეგიძლია გქონდეს კონტაქტი მხოლოდ ერთ ადამიანთან.
-//                 </p>
-//               </div>
-//             </div>
+//     <div className="relative mt-12 lg:mt-20">
+//       <div className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+//         <img
+//           alt=""
+//           loading="lazy"
+//           width="1000"
+//           height="500"
+//           decoding="async"
+//           data-nimg="1"
+//           className="w-full"
+//           // style="color:transparent"
+//           src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
+//         />
+//       </div>
+//       <div className="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+//         <div>
+//           <div className="flex items-center justify-center w-16 h-16 mx-auto bg-primary text-white rounded-full">
+//             <span className="text-xl font-semibold">1</span>
 //           </div>
+//           <h3 className="mt-6 text-xl font-semibold leading-tight md:mt-10">
+//             შექმენი აქაუნთი
+//           </h3>
+//           <p className="mt-4 text-base opacity-60 md:text-lg">
+//             შექმენი პროფილი და დაამატე ინფორმაცია შენს შესახებ.
+//           </p>
 //         </div>
-//         <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"></div>
-//       </section>
+//         <div>
+//           <div className="flex items-center justify-center w-16 h-16 mx-auto text-white bg-primary rounded-full">
+//             <span className="text-xl font-semibold">2</span>
+//           </div>
+//           <h3 className="mt-6 text-xl text font-semibold leading-tight md:mt-10">
+//             გააკეთე ქვიზი
+//           </h3>
+//           <p className="mt-4 text-base opacity-60 md:text-lg">
+//             შეავსე ფორმა რომელიც მოგვაწვდის შესაბამის მაგალითს.
+//           </p>
+//         </div>
+//         <div>
+//           <div className="flex items-center justify-center w-16 h-16 mx-auto text-white bg-primary rounded-full">
+//             <span className="text-xl font-semibold">3</span>
+//           </div>
+//           <h3 className="mt-6 text-xl font-semibold leading-tight md:mt-10">
+//             დაიწყე კონტაქტი
+//           </h3>
+//           <p className="mt-4 text-base opacity-60 md:text-lg">
+//             შენ შეგიძლია გქონდეს კონტაქტი მხოლოდ ერთ ადამიანთან.
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"></div>
+// </section>
 //       {/* <section cla></section> */}
 //       {/* <section className="py-24 ">
 //         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
