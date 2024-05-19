@@ -76,9 +76,9 @@ const config = {
       layout: {
         // radius
         radius: {
-          small: "0.3rem",
-          large: "0.3rem",
-          medium: "0.3rem",
+          small: "0.75rem",
+          large: "0.75rem",
+          medium: "0.75rem",
         },
       },
 

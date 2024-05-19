@@ -1,9 +1,12 @@
+import CoolBG from "@/_components/cool-bg";
+import Demo from "@/_components/demo";
 import { GeminiEffectHero } from "@/_components/gemini-effect-hero";
+import LoginButton from "@/_components/login-button";
 import Hero from "@/_components/marketing/hero";
 import { BackgroundBeams } from "@/_components/ui/background-beams";
 import { TracingBeam } from "@/_components/ui/tracing-beam";
 import getCurrentUser from "@/actions/user/current/get";
-import { Image } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { redirect } from "next/navigation";
 import { BsBarChartSteps } from "react-icons/bs";
 import { FaTasks } from "react-icons/fa";
@@ -30,9 +33,11 @@ export default async function HomePage({
     <>
       <>
         <div className="antialiased pt-4 relative">
+          <CoolBG />
           <Hero />
-
-          <div className="mt-20 container">
+          {/* <Demo /> */}
+          <div id="features"></div>
+          <div className="mt-20 block0 container">
             <h3 className="text-4xl text-center mb-4 font-semibold">
               Features
             </h3>
@@ -57,7 +62,7 @@ export default async function HomePage({
                   <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                     Task Breakdown
                   </span>
-                  <span className="mt-2 text-gray-600 dark:text-neutral-200">
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
                     Enter your big project, and our AI will split it into
                     smaller, manageable tasks.
                   </span>
@@ -76,7 +81,7 @@ export default async function HomePage({
                   <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                     Reports and Check-ins
                   </span>
-                  <span className="mt-2 text-gray-600 dark:text-neutral-200">
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
                     Submit reports for each deadline and receive regular
                     reminders.
                   </span>
@@ -95,7 +100,7 @@ export default async function HomePage({
                   <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                     Gamification
                   </span>
-                  <span className="mt-2 text-gray-600 dark:text-neutral-200">
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
                     Earn rewards and badges for completing tasks and staying on
                     track.
                   </span>
@@ -103,7 +108,8 @@ export default async function HomePage({
               </div>
             </nav>
           </div>
-          <section className="relative py-10 sm:py-16 lg:py-24 container">
+          <div id="howitworks"></div>
+          <section className="relative py-16 lg:py-24 container">
             <div>
               <div className="max-w-2xl mx-auto text-center ">
                 <h2 className="text-4xl text-foreground font-semibold mx-auto">
@@ -137,7 +143,7 @@ export default async function HomePage({
                     <h3 className="mt-6 font-semibold leading-tight md:mt-10">
                       Create account
                     </h3>
-                    <p className="mt-4 text-base text-gray-600">
+                    <p className="mt-2 text-base text-gray-600">
                       Create an account and add information about yourself.
                     </p>
                   </div>
@@ -148,7 +154,7 @@ export default async function HomePage({
                     <h3 className="mt-6 text font-semibold leading-tight md:mt-10">
                       Ask AI for Project
                     </h3>
-                    <p className="mt-4 text-base text-gray-600">
+                    <p className="mt-2 text-base text-gray-600">
                       Enter your big project, and our AI will split it into
                       smaller, manageable tasks.
                     </p>
@@ -160,7 +166,7 @@ export default async function HomePage({
                     <h3 className="mt-6 font-semibold leading-tight md:mt-10">
                       Make Progress
                     </h3>
-                    <p className="mt-4 text-base text-gray-600">
+                    <p className="mt-2 text-base text-gray-600">
                       Submit reports for each deadline and receive regular
                       reminders.
                     </p>
@@ -170,7 +176,7 @@ export default async function HomePage({
             </div>
             <div className="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"></div>
           </section>
-
+          <div id="whyitworks"></div>
           <div className="container mt-20">
             <div className=" py-10 lg:py-14 bg-gray-100 text-center rounded-lg px-6">
               {" "}
@@ -190,11 +196,11 @@ export default async function HomePage({
                 <div>
                   <span className="flex flex-col items-center gap-4">
                     <BsBarChartSteps size={25} className="text-primary" />
-                    <span className="grow ms-6">
+                    <span className="">
                       <span className="block font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                         Reduces Overwhelm
                       </span>
-                      <span className="block mt-1 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+                      <span className="block mt-2 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
                         Smaller steps make tasks less daunting, reducing
                         procrastination.
                       </span>
@@ -205,11 +211,11 @@ export default async function HomePage({
                 <div>
                   <span className="flex flex-col items-center gap-4">
                     <MdCenterFocusWeak size={25} className="text-primary" />
-                    <span className="grow ms-6">
+                    <span className="">
                       <span className="block font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                         Maintains Focus
                       </span>
-                      <span className="block mt-1 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+                      <span className="block mt-2 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
                         Regular check-ins keep you accountable and focused.
                       </span>
                     </span>
@@ -219,17 +225,120 @@ export default async function HomePage({
                 <div>
                   <span className="flex flex-col items-center gap-4">
                     <TfiTarget size={25} className="text-primary" />
-                    <span className="grow ms-6">
+                    <span className="">
                       <span className="block font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                         Addresses Procrastination Causes
                       </span>
-                      <span className="block mt-1 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
+                      <span className="block mt-2 text-gray-600 dark:hs-tab-active:text-gray-200 dark:text-neutral-200">
                         Tackles stress and anxiety by encouraging action.
                       </span>
                     </span>
                   </span>
                 </div>
               </nav>
+            </div>
+          </div>
+
+          <div className="mt-20 block0 container">
+            <h3 className="text-4xl text-center mb-4 font-semibold">
+              Testimonials
+            </h3>
+            <p className="max-w-screen-sm text-center text-gray-600 mx-auto mb-10">
+              Hear from our satisfied customers.
+            </p>
+            <nav
+              className="max-w-6xl mx-auto grid sm:flex gap-y-4 sm:gap-y-0 sm:gap-x-4"
+              aria-label="Tabs"
+              role="tablist"
+            >
+              <div className="text-center hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col items-center bg-gray-100 p-3 py-10 rounded-xl dark:hs-tab-active:bg-neutral-800 dark:hover:bg-neutral-800 active">
+                <span className="">
+                  <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+                    Software Developer
+                  </span>
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
+                    {`"Beapro's AI task breakdowns and reminders keep me organized and productive—it's a game-changer!” `}
+                    <span className="text-gray-800 font-semibold">
+                      - Luka Gorgadze
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div className="text-center hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col items-center bg-gray-100 p-3 py-10 rounded-xl dark:hs-tab-active:bg-neutral-800 dark:hover:bg-neutral-800 active">
+                <span className="">
+                  <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+                    Project Manager
+                  </span>
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
+                    {`"The platform helps me manage multiple projects effortlessly with its precise task breakdowns and helpful tips." `}
+                    <span className="text-gray-800 font-semibold">
+                      - Giga Samkharadze
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div className="text-center hs-tab-active:bg-gray-100 hs-tab-active:hover:border-transparent w-full flex flex-col items-center bg-gray-100 p-3 py-10 rounded-xl dark:hs-tab-active:bg-neutral-800 dark:hover:bg-neutral-800 active">
+                <span className="">
+                  <span className="hs-tab-active:text-blue-600 block font-semibold text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
+                    Game Developer
+                  </span>
+                  <span className="mt-2 block text-gray-600 dark:text-neutral-200">
+                    {`"Beapro makes big projects manageable and fun with its smart task generation and rewards system." `}
+                    <span className="text-gray-800 font-semibold">
+                      - Zuka Kenchuashvili
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div className="container mt-20">
+          <div className="rounded-xl bg-gradient-to-r from-primary to-secondary">
+            <div className="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+              <div className="flex flex-col sm:grid justify-center items-center sm:grid-cols-2 sm:justify-between sm:items-center gap-2">
+                <div className="text-center flex-col flex items-center sm:flex-row sm:text-start sm:order-2 sm:flex sm:justify-end sm:items-center">
+                  <p className="mb-2 sm:mb-0 sm:me-5 inline-block text-sm font-semibold text-white">
+                    Ready to get started?
+                  </p>
+                  <LoginButton
+                    className="text-white font-semibold"
+                    variant="bordered"
+                  />
+                </div>
+
+                <div className="flex items-center w-fit">
+                  <Button
+                    className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
+                    // href="#"
+                    variant="light"
+                  >
+                    <svg
+                      className="flex-shrink-0 size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    Watch demo
+                  </Button>
+                  {/* <span className="inline-block border-e border-white/30 w-px h-5 mx-2"></span>
+                  <a
+                    className="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-lg font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm"
+                    href="#"
+                  >
+                    {` Explore what's new`}
+                  </a> */}
+                </div>
+              </div>
             </div>
           </div>
         </div>

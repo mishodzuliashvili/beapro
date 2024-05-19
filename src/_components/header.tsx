@@ -40,12 +40,13 @@ export default function Header({ user }: HeaderProps) {
       className="p-1"
       maxWidth="full"
       // onMenuOpenChange={setIsMenuOpen}
+      isBlurred={true}
     >
       <NavbarContent>
-        <NavbarMenuToggle
+        {/* <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
-        />
+        /> */}
         <TLink href="/" color="foreground">
           <NavbarBrand>
             <Logo />
@@ -55,6 +56,26 @@ export default function Header({ user }: HeaderProps) {
           </NavbarBrand>
         </TLink>
       </NavbarContent>
+
+      {!user && (
+        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarItem>
+            <TLink color="foreground" href="#features">
+              Features
+            </TLink>
+          </NavbarItem>
+          <NavbarItem>
+            <TLink href="#howitworks" color="foreground">
+              How it works?
+            </TLink>
+          </NavbarItem>
+          <NavbarItem>
+            <TLink color="foreground" href="#whyitworks">
+              Why it works?
+            </TLink>
+          </NavbarItem>
+        </NavbarContent>
+      )}
 
       <NavbarContent justify="end">
         <NavbarItem>

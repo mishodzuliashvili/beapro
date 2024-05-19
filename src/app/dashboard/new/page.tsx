@@ -37,7 +37,7 @@ export default async function AIPage({ params, searchParams }: AIPageProps) {
 
   return (
     <>
-      <div className="container flex">
+      <div className="container flex mt-10">
         <TLink
           href="/dashboard"
           className="text-gray-600 group flex items-center gap-2 relative text-lg hover:text-primary"
@@ -63,17 +63,17 @@ export default async function AIPage({ params, searchParams }: AIPageProps) {
       <div className="container mt-10">
         <ol className="flex items-center max-w-sm w-full mx-auto">
           <li className="flex w-full items-center text-primary dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-primary/10 after:border-4 after:inline-block dark:after:border-blue-800">
-            <span className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
+            <span className="flex items-center justify-center w-10 h-10 bg-primary/10 rounded-xl lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
               <IoChatbubbleEllipsesOutline size={22} />
             </span>
           </li>
           <li className="flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700">
-            <span className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+            <span className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-xl lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
               <GrProjects />
             </span>
           </li>
           <li className="flex items-center">
-            <span className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
+            <span className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-xl lg:h-12 lg:w-12 dark:bg-gray-700 shrink-0">
               <IoMdDoneAll size={22} />
             </span>
           </li>

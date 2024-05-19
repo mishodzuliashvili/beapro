@@ -3,6 +3,7 @@ import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { Button } from "@nextui-org/react";
 import { User } from "@prisma/client";
 import LogoutLink from "./logout-link";
+import LoginButton from "./login-button";
 
 type AuthLinkProps = {
   user: User | null;
@@ -11,18 +12,7 @@ type AuthLinkProps = {
 export default function AuthLink({ user }: AuthLinkProps) {
   return (
     <>
-      {!user && (
-        <RegisterLink
-          authUrlParams={{
-            connection_id:
-              process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
-          }}
-        >
-          <Button variant="light" className="text-md">
-            Log in
-          </Button>
-        </RegisterLink>
-      )}
+      {!user && <LoginButton variant="flat" color="primary" />}
       {user && (
         <div>
           <LogoutLink />
