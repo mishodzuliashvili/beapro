@@ -1,12 +1,14 @@
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { Button } from "@nextui-org/react";
+import { FaGooglePlay } from "react-icons/fa";
+import { FiPlay } from "react-icons/fi";
 import { WiStars } from "react-icons/wi";
 
 type HeroProps = {};
 
 export default function Hero({}: HeroProps) {
   return (
-    <div className="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
+    <div className="relative overflow-hidden before:absolute before:top-0 before:start-1/2 befoare:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
         <div className="mt-5 max-w-screen-md text-center mx-auto">
           <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
@@ -31,18 +33,23 @@ export default function Hero({}: HeroProps) {
           </p>
         </div>
 
-        <div className="mt-8 gap-3 flex justify-center">
+        <div className="mt-8 gap-3 flex justify-center items-center flex-col sm:flex-row">
           <RegisterLink
+            className="w-full sm:w-auto"
             authUrlParams={{
               connection_id:
                 process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
             }}
           >
-            <Button color="primary" size="lg">
+            <Button color="primary" className="w-full sm:w-auto" size="lg">
               <WiStars size={30} />
               Get Started Now
             </Button>
           </RegisterLink>
+          <Button size="lg" className="w-full sm:w-auto" variant="flat">
+            <FiPlay size={22} />
+            Watch Demo
+          </Button>
         </div>
       </div>
     </div>
