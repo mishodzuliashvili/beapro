@@ -4,8 +4,10 @@ type LogoutLinkProps = {};
 
 export default function LogoutLink({}: LogoutLinkProps) {
   return (
-    <Button as={_LogoutLink} color="primary" variant="flat">
-      <_LogoutLink>Log out</_LogoutLink>
-    </Button>
+    <_LogoutLink>
+      <Button color="primary" variant="flat">
+        Log out
+      </Button>
+    </_LogoutLink>
   );
 }

@@ -12,20 +12,20 @@ export default function AuthLink({ user }: AuthLinkProps) {
   return (
     <>
       {!user && (
-        <Button color="primary" variant="flat">
-          <RegisterLink
-            authUrlParams={{
-              connection_id:
-                process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
-            }}
-          >
+        <RegisterLink
+          authUrlParams={{
+            connection_id:
+              process.env.NEXT_PUBLIC_KINDE_CONNECTION_GOOGLE || "",
+          }}
+        >
+          <Button color="primary" variant="flat">
             Log in
-          </RegisterLink>
-        </Button>
+          </Button>
+        </RegisterLink>
       )}
       {user && (
         <div>
-          {user.name} <LogoutLink />
+          <LogoutLink />
         </div>
       )}
     </>

@@ -1,6 +1,5 @@
-import Select from "@/_components/select";
-import db from "@/lib/db";
-import PageForm from "./page-form";
+import TLink from "@/_components/t-link";
+import { Button } from "@nextui-org/react";
 
 type DashboardPageProps = {
   params: {};
@@ -11,14 +10,12 @@ export default async function DashboardPage({
   params,
   searchParams,
 }: DashboardPageProps) {
-  const users = await db.user.findMany();
   return (
     <>
       <div className="container">
-        {users.map((user) => (
-          <div key={user.id}>{user.name}</div>
-        ))}
-        <PageForm />
+        <Button as={TLink} href="/dashboard/new" className="mt-4">
+          Create new project
+        </Button>
       </div>
     </>
   );
